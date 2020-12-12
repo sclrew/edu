@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: #f4f8fa;
+
+}
+
+
+/************************** strani ***********************************/
+
+.strani{
+    position: relative;   
+    font-family: 'Muller';
+    max-width: 1170px;
+    min-height: 675px;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+.strani_title{
+    text-align: center;
+    font-size: 36px;
+    color: #2b2a28;  
+    font-weight: bold;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.strani_flags{
+    margin-top: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.strani_flags .box{
+    font-size: 16px;
+    border-radius: 10px;
+    height: 35px;
+    /* min-width: 140px; */
+    margin: 0 7px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    cursor: pointer;
+}
+
+.strani_flags .box span {
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.strani_flags .box.active{
+    background-color: #d1e4f3;
+}
+
+.strani_flags .box.active img{
+    opacity: 1;
+}
+
+.strani_flags .box img{
+    opacity: 0.2;
+    margin-left: 15px;
+}
+
+.strani_line{
+    display: none;
+}
+
+.strani_main{
+    margin-top: 30px;
+    min-height: 550px;
+    background-color: #fff;
+    border-radius: 15px;
+    background-image: url('../img/strani_main_bg.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.strani_line{
+    position: relative;
+    margin-top: 20px;
+    height: 5px;
+    margin-left: 110px;
+    margin-right: 110px;
+    border-radius: 2px;
+    background-color: #e8e8e8;
+    
+}
+.strani_line_blue{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 14.5%;
+    height: 5px;
+    border-radius: 2px;
+    background-color: #66b2e3;
+}
+
+.strani_vuz{
+    padding-left: 45px;
+    padding-top: 40px;
+    max-width: 1140px;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+.strani_vuz_title{
+    font-size: 20px;
+    line-height: 25px;
+    color: #173e90;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.strani_vuz_subtitle{
+    font-size: 16px;
+    line-height: 25px;
+    color: #6b6b6b;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.strani_vuz_box{
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.strani_vuz_box img{
+    margin-right: 20px;
+    opacity: 0.3;    
+}
+
+.strani_vuz_box img.active{
+    opacity: 1;    
+}
+.strani_vuz_name{
+    padding-top: 3px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.strani_vuz_translate{
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+.strani_vuz_carousel_layer{
+    position: relative;
+    width: 500px;
+    min-height: 300px;
+    border-radius: 30px;
+    box-shadow: -3px 5px 10px 5px #DFE4ED, 
+                0px -1px 5px 5px #DFE4ED, 
+                3px 5px 10px 5px #DFE4ED, 
+                3px 0px 10px 5px #DFE4ED;
+    overflow: hidden;
+    
+
+}
+.strani_vuz_carousel_layer img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+.strani_vuz_carousel_layer img.show_vuz{
+    display: block;
+}
+
+.strani_vuz_carousel_title{
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+
+.strani_vuz_left_arrow, .strani_vuz_right_arrow{
+    cursor: pointer;
+    height: 70px;
+    width: 42px;
+    z-index: 2;
+    position: absolute;
+
+    background-image: url('../img/icon_strani_left.png');
+}
+.strani_vuz_left_arrow{
+    top: 115px;
+    left: 10px;
+}
+
+.strani_vuz_right_arrow{
+    top: 115px;
+    right: 10px;
+    transform: rotate(180deg);
+}
+
+.strani_vuz_text{
+    display: none;
+}
+
+.show_text{
+    display: block;
+}
+
+.strani_show_all{
+    display: none;
+}
+
+.strani_footer{
+    padding-left: 45px;
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.strani_footer_text{
+    width: 330px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.strani_footer_button_shadow{
+    margin-left: 75px;
+    width: 270px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 33px;
+    border: 1px solid rgba(252, 251, 251, 0.212);
+    background-color: rgba(128, 128, 128, 0.109);
+}
+
+.strani_footer_button{
+    transition: all 0.7s ease;
+    width: 260px;
+    height: 55px;
+    font-size: 13px;
+    word-spacing: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(0deg, #fca006, #fed44f);
+    border-radius: 28px; 
+}
+
+.strani_footer_button:hover{
+    color: white;
+    width: 270px;
+    height: 65px;
+    border-radius: 33px;
+}
+
+
+@media (max-width:1190px){
+    .strani_vuz_box{
+        display: none;
+    }
+
+    .strani_show_all{
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 40px;
+        margin-top: 35px;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #173e90; 
+         
+    }
+    .strani_show_all span{
+        display: inline-block;
+        border-bottom: 1px solid #173e90;
+    }
+
+    .strani_show_all img{
+        margin-left: 13px;
+        margin-top: -2px;
+    }
+
+    .strani_vuz_box.show_box{
+        display: flex;
+    }
+
+    .strani_title {
+        font-size: 26px;
+    }
+
+    .strani_flags{
+        margin-left: 100px;
+        justify-content: flex-start;
+        
+    }
+
+    .strani_line{
+        display: block;
+    }
+
+    .strani_vuz{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .strani_vuz_title {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0 auto;
+        text-align: center;
+        width: 300px;
+    }
+
+    .strani_vuz_subtitle {
+        margin: 5px auto 20px auto;
+        text-align: center;
+        width: 300px;
+    }
+
+    .strani_vuz_address{
+        display: none;
+    }
+
+    .strani_vuz_carousel{
+        display: none;
+    }
+
+    .strani_flags .box{
+        font-size: 15px;
+        margin: 0px 0px;
+        
+    }
+    .strani_flags .box span{
+        margin-left: 10px;
+        margin-right: 15px;
+    }
+
+    .strani_footer{
+        margin-top: 0;
+        height: 220px;
+        background-image: url('../img/footer_mobile_bg.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+        justify-content: flex-end;
+        flex-direction: column;
+
+    }
+    .strani_footer_text {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .strani_footer_button_shadow {
+        margin-left: 0;
+        margin-bottom: 33px;
+        margin-top: 22px;
+    }
+}
+
+
+
+
+/************************** chat    **********************************/
+.chat{ 
+    position: relative;   
+    padding-top: 82px;
+    font-family: 'Muller';
+    max-width: 1170px;
+    min-height: 430px;
+    background-image: url(../img/chat_bg.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+.chat_title{
+
+    width: 480px;
+    font-size: 36px;
+    line-height: 39px;
+    font-weight: bold;
+}
+
+.chat_title span{
+    color: #fec50c;
+}
+
+.chat_blue{
+    display: flex;
+    position: absolute;
+    background-image: url('../img/chat_blue.png');
+    width: 231px;
+    height: 83px;
+    left: 46%;
+    bottom: 258px;    
+    animation: achatBlue 15s linear  infinite;
+}
+
+@keyframes achatBlue {
+    45% {  opacity: 1;  }
+    50% { opacity: 0;  }
+    70% {  opacity: 0;}
+    80% { opacity: 1;}
+}
+
+.chat_blue span{
+    padding-left: 25px;
+    padding-top: 30px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.chat_yellow{
+    padding-left: 57px;
+    padding-top: 20px;
+    position: absolute;
+    z-index: 1;
+    background-image: url('../img/chat_yellow.png');
+    width: 480px;
+    height: 132px;
+    left: 75px;
+    bottom: 0px;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: achatYellow 15s linear  infinite;
+}
+
+@keyframes achatYellow {
+    45% {  opacity: 1;  }
+    50% { opacity: 0;  }
+    90% {  opacity: 0;}
+    100% { opacity: 1;}
+}
+
+
+.chat_yellow span{
+    font-size: 24px;
+    line-height: 37px;
+    font-weight: bold;
+}
+
+.chat_yellow p{
+    font-size: 20px;
+    line-height: 24px;
+
+}
+
+.chat_logo_gradient{
+    position: absolute;
+    left: 53%;
+    bottom: 115px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-image: radial-gradient(at center, #f9f9f9, #fbfbfb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat_logo_layer{    
+    width: 72px;
+    height: 72px;
+    background-color: #fff;
+
+    border-radius: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat_logo{
+    padding-top: 10px;
+}
+
+@media (max-width: 1220px){
+    .chat_title{
+        margin: 0 auto;
+        font-size: 30px;
+    }
+    .chat{        
+        min-height: 670px;
+
+    }
+    .chat_blue{        
+        left: 26vw;
+        bottom: 372px;
+    }
+
+    .chat_logo_gradient {
+        left: 64%;
+        bottom: 150px;
+    }
+
+    .chat_yellow{
+        position: absolute;
+        z-index: 1;
+        background-image: url('../img/chat_yellow_left.png'); 
+        left: -200px;
+        bottom: 97px;
+        width: 296px;
+        height: 125px;
+        padding-left: 17px;
+        padding-top: 10px;
+
+    }
+
+    .chat_yellow span{
+        font-size: 20px;
+        line-height: 37px;
+    }
+    
+    .chat_yellow p{
+        font-size: 16px;
+        line-height: 20px;
+    
+    }
+
+
+}
+
+@media (max-width: 560px){
+    .chat{
+        padding-left: 100px;
+        min-height: 660px;
+        background-image: url(../img/chat_bg_mobile.png);
+    }
+
+    .chat_title{
+        margin: 0;
+        width: 330px;
+        font-size: 26px;
+    }
+
+    .chat_blue {
+        left: 17vw;
+        bottom: 350px;
+    }
+
+    .chat_logo_gradient {
+        left: 64%;
+        bottom: 110px;
+    }
+}
+
+
